@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Top 10 Jogadores</h1>
+        <table id="ranking-table">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Instituição</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados do ranking serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function fetchRankings() {
+            try {
+                const response = await fetch("/api/rankings");
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+                const data = await response.json();
+                const rankings = data.rankings || [];
+                const tableBody = document.getElementById("ranking-table").querySelector("tbody");
+                tableBody.innerHTML = ""; // Limpa a tabela antes de preencher
+
+                if (rankings.length === 0) {
+                    const row = tableBody.insertRow();
+                    const cell = row.insertCell();
+                    cell.colSpan = 4;
+                    cell.textContent = "Nenhuma pontuação registrada ainda.";
+                    cell.style.textAlign = "center";
+                } else {
+                    rankings.forEach((player, index) => {
+                        const row = tableBody.insertRow();
+                        row.insertCell().textContent = index + 1;
+                        row.insertCell().textContent = player.nome;
+                        row.insertCell().textContent = player.instituicao;
+                        row.insertCell().textContent = player.pontos;
+                    });
+                }
+            } catch (error) {
+                console.error("Erro ao buscar rankings:", error);
+                const tableBody = document.getElementById("ranking-table").querySelector("tbody");
+                tableBody.innerHTML = "";
+                const row = tableBody.insertRow();
+                const cell = row.insertCell();
+                cell.colSpan = 4;
+                cell.textContent = "Erro ao carregar o ranking.";
+                cell.style.textAlign = "center";
+                cell.style.color = "red";
+            }
+        }
+
+        // Busca os rankings quando a página carrega
+        document.addEventListener("DOMContentLoaded", fetchRankings);
+
+        // Opcional: Atualiza o ranking periodicamente (ex: a cada 30 segundos)
+        // setInterval(fetchRankings, 30000);
+    </script>
+</body>
+</html>

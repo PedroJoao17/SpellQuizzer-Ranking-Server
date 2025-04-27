@@ -1,0 +1,64 @@
+{
+  "rankings": [
+    {
+      "nome": "Marcos",
+      "instituicao": "Sergio Pessoa",
+      "pontos": 3000,
+      "data": "2025-04-27T19:17:39.694Z"
+    },
+    {
+      "nome": "Paulo",
+      "instituicao": "CMPM",
+      "pontos": 1500,
+      "data": "2025-04-27T19:13:51.800Z"
+    },
+    {
+      "nome": "Jogador 3",
+      "instituicao": "Colégio XYZ",
+      "pontos": 1200,
+      "data": "2025-04-27T11:53:44.905Z"
+    },
+    {
+      "nome": "Jogador Teste",
+      "instituicao": "Escola Teste",
+      "pontos": 1000,
+      "data": "2025-04-27T11:53:17.778Z"
+    },
+    {
+      "nome": "Joao Pedro",
+      "instituicao": "ESBAM",
+      "pontos": 1000,
+      "data": "2025-04-27T19:12:40.328Z"
+    },
+    {
+      "nome": "André",
+      "instituicao": "1° de maio",
+      "pontos": 900,
+      "data": "2025-04-27T19:17:08.512Z"
+    },
+    {
+      "nome": "Jogador 2",
+      "instituicao": "Escola ABC",
+      "pontos": 850,
+      "data": "2025-04-27T11:53:44.893Z"
+    },
+    {
+      "nome": "Maria",
+      "instituicao": "Maria do Ceu",
+      "pontos": 500,
+      "data": "2025-04-27T19:16:17.235Z"
+    },
+    {
+      "nome": "Carlos",
+      "instituicao": "Arthur Virgilio",
+      "pontos": 250,
+      "data": "2025-04-27T19:15:50.701Z"
+    },
+    {
+      "nome": "Richard",
+      "instituicao": "Lecita",
+      "pontos": 80,
+      "data": "2025-04-27T19:15:27.057Z"
+    }
+  ]
+}

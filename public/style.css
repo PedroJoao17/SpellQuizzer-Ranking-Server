@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    background-image: url('images/arcade_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5);
+    width: 90%;
+    max-width: 800px;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 0, 255, 0.2);
+    transform: scale(1.02);
+}
+
+tbody tr:nth-child(1) {
+    background-color: rgba(255, 215, 0, 0.3);
+}
+
+tbody tr:nth-child(2) {
+    background-color: rgba(192, 192, 192, 0.3);
+}
+
+tbody tr:nth-child(3) {
+    background-color: rgba(205, 127, 50, 0.3);
+}
+
+tbody tr:nth-child(1) td {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+tbody tr:nth-child(2) td {
+    color: #c0c0c0;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(3) td {
+    color: #cd7f32;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    th, td {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 8px 3px;
+        font-size: 0.8rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
