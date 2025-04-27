@@ -6,7 +6,8 @@ function getAllRankings(req, res) {
 }
 
 function addRanking(req, res) {
-  const { nome, instituicao, pontos } = req.body;
+  console.log(req.body);
+  const { nome, instituicao, pontos } = req.body.data;
 
   if (!nome || !instituicao || !pontos) {
     return res.status(400).json({ error: 'Nome, instituição e pontos são obrigatórios' });
